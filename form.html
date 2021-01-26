@@ -34,6 +34,88 @@
 		</nav>
 	</header>
 	<main class="inner-page">
+		<section class="comments">
+			<h1 class="comments__title">Оставьте свой отзыв</h1>
+			<p class="comments__desc">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+			<form action="https://echo.htmlacademy.ru" method="post" class="comments__form">
+				<fieldset class="comments__introduce">
+					<legend class="comments__form-title">Представьтесь:</legend>
+					<ul class="introduce__list">
+						<li class="introduce__item">
+							<label class="introduce__name" for="name">Имя*:</label>
+							<input type="text" class="visually-hidden" name="name" id="name" placeholder="Петр" aria-label="Введите ваше имя" required>
+						</li>
+						<li class="introduce__item">
+							<label class="introduce__name" for="surname">Фамилия*:</label>
+							<input type="text" class="visually-hidden" name="surname" id="surname" placeholder="Иванов" aria-label="Введите вашу фамилию" required>
+						</li>
+						<li class="introduce__item">
+							<label class="introduce__name" for="patronymic">Отчество:</label>
+							<input type="text" class="visually-hidden" name="patronymic" id="patronymic" placeholder="Александрович" aria-label="Введите ваше отчество">
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="comments__contacts">
+					<legend class="comments__form-title">Контактная информация:</legend>
+					<ul class="contacts__list">
+						<li class="contacts__item">
+							<label for="phonenumber" class="contacts__name">Контактный телефон*:</label>
+							<input type="text" class="visually-hidden" name="phonenumber" id="phonenumber" placeholder="Введите телефон" aria-label="Введите ваш номер телефона" required>
+						</li>
+						<li class="contacts__item">
+							<label for="email" class="contacts__name">Электронная почта*:</label>
+							<input type="email" class="visually-hidden" name="email" id="email" placeholder="Введите e-mail" aria-label="Введите вашу почту" required>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="comments__impression">
+					<legend class="comments__form-title">Ваше общее впечатление:</legend>
+					<ul class="impression__list">
+						<li class="impression__item">
+							<input type="radio" class="visually-hidden filter-input-radio" name="feel" value="positive" id="positive-radio" checked>
+							<label for="positive-radio" class="impression__name">Скорее положительное</label>
+						</li>
+						<li class="impression__item">
+							<input type="radio" class="visually-hidden filter-input-radio" name="feel" value="negative" id="negative-radio">
+							<label for="negative-radio" class="impression__name">Скорее отрицательное</label>
+						</li>
+						<li class="impression__item">
+							<input type="radio" class="visually-hidden filter-input-radio" name="feel" value="uncertainty" id="uncertainty-radio">
+							<label for="uncertainty-radio" class="impression__name">Затрудняюсь ответить</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="comments__places">
+					<legend class="comments__form-title">Посещенные достопримечательности:</legend>
+					<ul class="places__list">
+						<li class="places__item">
+							<input type="checkbox" class="visually-hidden filter-input-checkbox" name="devilsbridge" id="devilsbridge" checked>
+							<label for="devilsbridge" class="places__name">Мост Дьявола</label>
+						</li>
+						<li class="places__item">
+							<input type="checkbox" class="visually-hidden filter-input-checkbox" name="mountainbell" id="mountainbell" checked>
+							<label for="mountainbell" class="places__name">Гора-Колокол</label>
+						</li>
+						<li class="places__item">
+							<input type="checkbox" class="visually-hidden filter-input-checkbox" name="slidepark" id="slidepark" checked>
+							<label for="slidepark" class="places__name">Слайд-парк</label>
+						</li>
+						<li class="places__item">
+							<input type="checkbox" class="visually-hidden filter-input-checkbox" name="redrocks" id="redrocks">
+							<label for="redrocks" class="places__name">Красные скалы</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset class="comments__emotions">
+					<legend class="form-title">Опишите свои эмоции:</legend>
+					<textarea name="emotions" cols="30" rows="10" class="emotions__input" placeholder="Опишите подробно все свои восторги" aria-label="Опишите ваши эмоции, которые вы получили от путешествий"></textarea>
+				</fieldset>
+				<div class="comments__wrapper">
+					<button class="comments__button" type="submit">Отправить отзыв</button>
+					<span class="comments__required-fields"><span class="comments__star">*</span> — обязательные <span class="contest__required-desktop">для заполнения</span>поля</span>
+				</div>
+			</form>
+		</section>
 
 	</main>
 	<footer class="page-footer">
@@ -64,6 +146,16 @@
 			</a>
 		</div>
 	</footer>
+	<section class="success success-none">
+		<h2 class="success__title">Ваш отзыв отправлен!</h2>
+		<p class="success__text">Ваш отзыв отправлен! Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+		<button class="success__close">Закрыть окно</button>
+	</section>
+	<section class="failure failure-none">
+		<h2 class="failure__title">Что-то пошло не так!</h2>
+		<p class="failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+		<button class="failure__confirm">Ок</button>
+	</section>
 </body>
 
 </html>

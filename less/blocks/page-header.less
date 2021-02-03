@@ -1,6 +1,9 @@
 .page-header {
 	width: 100%;
 	min-height: 445px;
+	
+	display: flex;
+	flex-direction: column;
 
 
 	background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -15,10 +18,11 @@
 }
 
 .page-header__logo {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
+	text-align: center;
+}
+
+.page-header__wrapper {
+	order: 1;
 }
 
 @media (min-width:@tablet-width) {

@@ -34,9 +34,24 @@ img {
   max-width: 100%;
   height: auto;
 }
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.text-reset {
+  margin: 0;
+  padding: 0;
+}
+.index-central {
+  margin: 0 auto;
+  max-width: 940px;
+}
 .page-header {
   width: 100%;
   min-height: 445px;
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 56px;
@@ -48,10 +63,10 @@ img {
   }
 }
 .page-header__logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+}
+.page-header__wrapper {
+  order: 1;
 }
 @media (min-width: 768px) {
   .page-header {
@@ -64,4 +79,86 @@ img {
   .page-header {
     background-image: url("../img/bg-back-desktop@2x.jpg");
   }
+}
+.main-nav {
+  position: relative;
+}
+.main-nav {
+  order: -1;
+}
+.main-nav--opened .main-nav__list {
+  display: block;
+}
+.main-nav--closed .main-nav__list {
+  display: none;
+}
+.main-nav__wrapper {
+  background-color: #81b3d2;
+}
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-list__item {
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(1, 1, 1, 0.2);
+}
+.site-list__item a {
+  display: block;
+  padding: 7px 0px;
+  font-family: "PT Sans Bold";
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+}
+.site-list__item:first-child {
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(1, 1, 1, 0.2);
+}
+.site-list__item:last-child {
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 4px 0px rgba(1, 1, 1, 0.2);
+}
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  display: block;
+  padding: 0;
+  width: 23px;
+  height: 21px;
+  background: none;
+  border: none;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
+}
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 9.5px;
+  width: 4px;
+  height: 28px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 9.5px;
+  width: 4px;
+  height: 28px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
 }

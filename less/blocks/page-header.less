@@ -1,4 +1,5 @@
 .page-header {
+	position: relative;
 	width: 100%;
 	min-height: 445px;
 
@@ -14,10 +15,25 @@
 	(min-resolution: @retina-dppx) {
 		background-image: url("../img/bg-back-mobile@2x.jpg");
 	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+
+		width: 100%;
+		height: 26px;
+
+		background: linear-gradient(to bottom left, transparent 50%, #ffffff 50.9%) left/51.5% 100% no-repeat, linear-gradient(to bottom right, transparent 50%, #ffffff 50.9%) right/51.5% 100% no-repeat;
+	}
 }
 
 .page-header-nojs {
 	background-image: none;
+
+	&::after {
+		content: none;
+	}
 }
 
 .page-header__logo {
@@ -27,13 +43,11 @@
 
 @media(max-width:@mobile-only-width) {
 	.page-header-nojs .page-header__wrapper {
+		position: relative;
 		margin-top: -29.7px;
 		order: 1;
 		width: 100%;
-		min-height: 445px;
-
-		display: flex;
-		flex-direction: column;
+		min-height: 389px;
 
 		background-image: url(../img/text-index-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
 		background-repeat: no-repeat;
@@ -43,6 +57,17 @@
 		@media (min-resolution: @retina-dpi),
 		(min-resolution: @retina-dppx) {
 			background-image: url("../img/bg-back-mobile@2x.jpg");
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+
+			width: 100%;
+			height: 26px;
+
+			background: linear-gradient(to bottom left, transparent 50%, #ffffff 50.9%) left/51.5% 100% no-repeat, linear-gradient(to bottom right, transparent 50%, #ffffff 50.9%) right/51.5% 100% no-repeat;
 		}
 	}
 }

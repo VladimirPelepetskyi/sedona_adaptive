@@ -62,6 +62,8 @@
 
 	background: none;
 	border: none;
+
+	z-index: 3;
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -107,3 +109,15 @@
 		transform: rotate(-45deg);
 	}
 }
+
+//no-js
+.main-nav--nojs {
+	.main-nav__list {
+		display: block;
+	}
+
+	.main-nav__toggle {
+		display: none;
+	}
+}
+//no-js

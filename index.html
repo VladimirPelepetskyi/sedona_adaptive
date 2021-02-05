@@ -45,19 +45,36 @@
 			</div>
 			<ul class="features__list">
 				<li class="features__item">
-					<h3 class="features__title">Настоящий городок</h3>
-					<span class="features__number">— №1 —</span>
-					<p class="features__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
+					<div class="features__item-wrapper">
+						<div class="features__text-wrapper">
+							<h3 class="features__title">Настоящий городок</h3>
+							<span class="features__number">— №1 —</span>
+							<p class="features__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
+						</div>
+						<p class="features_wrapper-picture">
+							<picture>
+								<!--
+								<source type="image/webp" media="(min-width: 960px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+								<source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+								<source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
+
+-->
+								<source media="(min-width: 960px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+								<source media="(min-width: 500px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+								<img class="features__picture" src="img/main-city-mobile@1x.jpg" , srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото настоящего городка">
+							</picture>
+						</p>
+					</div>
 					<ul class="features__sublist">
-						<li class="features__sublist-item">
+						<li class="features__sublist-item features__sublist-house">
 							<h3 class="features__sublist-title">Жилье</h3>
 							<p class="features__sublist-desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 						</li>
-						<li class="features__sublist-item">
+						<li class="features__sublist-item features__sublist--food">
 							<h3 class="features__sublist-title">Еда</h3>
 							<p class="features__sublist-desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 						</li>
-						<li class="features__sublist-item">
+						<li class="features__sublist-item features__sublist--souvenir">
 							<h3 class="features__sublist-title">Сувениры</h3>
 							<p class="features__sublist-desc">Не только китайского, но и местного производства!</p>
 						</li>

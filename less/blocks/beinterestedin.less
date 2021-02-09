@@ -34,6 +34,10 @@
 	text-transform: uppercase;
 }
 
+.beinterestedin__desc--br {
+	display: none;
+}
+
 .beinterestedin__button {
 	display: block;
 	width: 100%;
@@ -51,4 +55,21 @@
 	background-color: #81b3d2;
 	box-sizing: border-box;
 	cursor: pointer;
+}
+
+@media (min-width:@tablet-width) {
+	.beinterestedin {
+		padding: 56px 0px 58px;
+
+		max-width: 458px;
+	}
+
+	.beinterestedin__title {
+		font-size: 30px;
+		margin-bottom: 36px;
+	}
+
+	.beinterestedin__desc--br {
+		display: block;
+	}
 }

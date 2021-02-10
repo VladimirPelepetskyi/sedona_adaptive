@@ -1,14 +1,21 @@
 .page-header {
 	position: relative;
 	width: 100%;
-	min-height: 445px;
 
 	display: flex;
 	flex-direction: column;
+}
+
+.page-header__wrapper {
+	position: relative;
+	margin-top: -29.7px;
+	order: 1;
+	width: 100%;
+	min-height: 389px;
 
 	background-image: url(../img/text-index-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
 	background-repeat: no-repeat;
-	background-position: center 146px, center 56px;
+	background-position: center 90px, center 0px;
 	background-size: 282px 214px, 768px auto;
 
 	@media (min-resolution: @retina-dpi),
@@ -28,64 +35,25 @@
 	}
 }
 
-.page-header-nojs {
-	background-image: none;
-
-	&::after {
-		content: none;
-	}
-}
-
 .page-header__logo {
 	text-align: center;
 	z-index: 2;
 }
 
-.page-header__image {
-	position: relative;
+.inner-page .page-header__wrapper {
+	min-height: 158px;
+
+	background-image: url(../img/inner-text-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
+	background-repeat: no-repeat;
+	background-position: center 52px, center -231px;
+	background-size: 229px 39px, 768px auto;
 }
 
-@media(max-width:@mobile-only-width) {
-	.page-header-nojs .page-header__wrapper {
-		position: relative;
-		margin-top: -29.7px;
-		order: 1;
-		width: 100%;
-		min-height: 389px;
-
-		background-image: url(../img/text-index-mobile.svg), url(../img/bg-back-mobile@1x.jpg);
-		background-repeat: no-repeat;
-		background-position: center 90px, center 0px;
-		background-size: 282px 214px, 768px auto;
-
-		@media (min-resolution: @retina-dpi),
-		(min-resolution: @retina-dppx) {
-			background-image: url(../img/text-index-mobile.svg), url(../img/bg-back-mobile@2x.jpg);
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-
-			width: 100%;
-			height: 26px;
-
-			background: linear-gradient(to bottom left, transparent 50%, #ffffff 50.9%) left/51.5% 100% no-repeat, linear-gradient(to bottom right, transparent 50%, #ffffff 50.9%) right/51.5% 100% no-repeat;
-		}
-	}
-}
 
 @media (min-width:@tablet-width) {
-	.page-header {
-		background-image: none;
-
-		&::after {
-			content: none;
-		}
-	}
 
 	.page-header__wrapper {
+		margin-top: 0px;
 		min-height: 518px;
 
 		background-image: url(../img/text-index-tablet.svg), url(../img/bg-back-desktop@1x.jpg);
@@ -122,4 +90,14 @@
 			background: linear-gradient(to bottom left, transparent 50%, #ffffff 50.9%) left/51.5% 100% no-repeat, linear-gradient(to bottom right, transparent 50%, #ffffff 50.9%) right/51.5% 100% no-repeat;
 		}
 	}
+
+	.inner-page .page-header__wrapper {
+		min-height: 290px;
+
+		background-image: url(../img/inner-text-tablet.svg), url(../img/bg-back-mobile@1x.jpg);
+		background-repeat: no-repeat;
+		background-position: center 95px, center -276px;
+		background-size: 457px 78px, 1200px auto;
+	}
+
 }

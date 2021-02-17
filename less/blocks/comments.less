@@ -1,0 +1,182 @@
+.comments__text-wrapper {
+	padding: 37px 20px 19px;
+	margin: 0 auto;
+
+	max-width: 435px;
+}
+
+.comments__title {
+	.text-reset;
+	margin-bottom: 30px;
+
+	font-family: "PT Sans Bold";
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.comments__desc {
+	.text-reset;
+
+	font-family: "PT Sans Regular";
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.comments__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.comments-wrapper {
+	padding-top: 20px;
+
+	border-top: 1px solid #e5e5e5;
+}
+
+.comments__fieldset {
+	margin: 0;
+	padding: 0px 20px;
+	border: 0;
+}
+
+.comments__introduce {
+	margin-bottom: 25px;
+}
+
+.comments__form-title {
+	font-family: "PT Sans Bold";
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.introduce__list {
+	.list-reset;
+	margin-top: 21px;
+}
+
+.introduce__item {
+	margin-bottom: 20px;
+
+	display: flex;
+	align-items: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}
+
+.introduce__name {
+	margin-right: 15px;
+
+	font-family: "PT Sans Regular";
+	font-size: 14px;
+	line-height: 26px;
+	color: #333333;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.introduce__input {
+	padding: 16px 22px;
+
+	width: 100%;
+	font-family: "PT Sans Bold";
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+
+	border: none;
+	background-color: #f2f2f2;
+
+	box-sizing: border-box;
+
+	&::placeholder {
+		font-family: "PT Sans Bold";
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: bold;
+		color: #000000;
+	}
+}
+
+.comments__contacts {
+	margin-bottom: 28px;
+}
+
+.contacts__list {
+	.list-reset;
+	margin-top: 22px;
+}
+
+.contacts__item {
+	margin-bottom: 12px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contacts__name {
+	margin-left: 22px;
+	margin-bottom: 9px;
+
+	display: block;
+
+	font-family: "PT Sans Regular";
+	font-size: 14px;
+	line-height: 26px;
+	color: #333333;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.contacts__input {
+	padding: 16px 80px 16px 22px;
+
+	width: 100%;
+	font-family: "PT Sans Bold";
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+
+	border: none;
+	background-color: #f2f2f2;
+
+	box-sizing: border-box;
+
+	&::placeholder {
+		font-family: "PT Sans Bold";
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: bold;
+		color: #000000;
+	}
+
+	&[name="phonenumber"] {
+		background-image: url(../img/icon-phone.svg), linear-gradient(to bottom, #e6e6e6, #e6e6e6);
+		background-repeat: no-repeat;
+		background-position: right 18px center, top right;
+		background-size: 18px 18px, 58px 58px;
+	}
+
+	&[name="email"] {
+		background-image: url(../img/icon-email.svg), linear-gradient(to bottom, #e6e6e6, #e6e6e6);
+		background-repeat: no-repeat;
+		background-position: right 18px center, top right;
+		background-size: 18px 18px, 58px 58px;
+	}
+}

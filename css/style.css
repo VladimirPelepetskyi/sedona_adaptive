@@ -982,8 +982,10 @@ img {
   padding: 0px 20px;
   border: 0;
 }
-.comments__introduce {
-  margin-bottom: 25px;
+@media (max-width: 767px) {
+  .comments__introduce {
+    margin-bottom: 25px;
+  }
 }
 .comments__form-title {
   font-family: "PT Sans Bold";
@@ -1225,6 +1227,75 @@ img {
 }
 .comments__required-fields {
   display: none;
+}
+@media (min-width: 768px) {
+  .comments__text-wrapper {
+    padding-bottom: 0;
+  }
+  .comments__title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+  .comments__form {
+    margin: 76px auto 0 auto;
+    padding: 0px 60px;
+    max-width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .introduce__order {
+    position: relative;
+    margin-left: auto;
+    width: 41.291%;
+  }
+  .introduce__order::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -57px;
+    width: 1px;
+    height: 100%;
+    background-color: #dbdbdb;
+  }
+  .introduce__list {
+    margin-top: 60px;
+  }
+  .contacts__order {
+    margin-top: 72px;
+    width: 100%;
+  }
+  .impression__order {
+    position: relative;
+    width: 42%;
+    order: -1;
+  }
+  .impression__list {
+    margin-top: 75px;
+  }
+  .impression__item {
+    margin-bottom: 52px;
+  }
+  .impression__item:last-child {
+    margin-bottom: 0;
+  }
+  .introduce__form-title,
+  .impression__form-title {
+    text-align: left;
+  }
+  .emotions__order {
+    width: 100%;
+  }
+  .comments-wrapper {
+    padding-top: 0;
+    border: 0;
+  }
+  .comments__fieldset {
+    padding: 0px;
+  }
+  .comments__form-title {
+    font-size: 21px;
+  }
 }
 .page-footer {
   padding: 38px 0px 23px;

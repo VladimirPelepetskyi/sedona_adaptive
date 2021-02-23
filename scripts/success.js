@@ -1,4 +1,4 @@
-var signup = document.querySelector(".contest__button");
+var signup = document.querySelector(".comments__button");
 
 var success = document.querySelector(".success");
 

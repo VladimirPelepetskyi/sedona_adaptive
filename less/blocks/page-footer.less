@@ -50,6 +50,20 @@
 	height: 48px;
 
 	background-color: #81b3d2;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: #669EC0;
+	}
+
+	&:active {
+		background-color: #5496BD;
+
+		img {
+			opacity: 0.3;
+		}
+	}
 }
 
 .page-footer__copyright {
@@ -72,6 +86,16 @@
 
 .page-footer__copyright-link {
 	font-size: 0;
+
+	&:hover path,
+	&:focus path {
+		fill: #81B3D2;
+	}
+
+	&:active path {
+		fill: #000000;
+		opacity: 0.3;
+	}
 }
 
 @media (min-width:@tablet-width) {

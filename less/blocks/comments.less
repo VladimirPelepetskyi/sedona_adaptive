@@ -104,6 +104,7 @@
 	background-color: #f2f2f2;
 
 	box-sizing: border-box;
+	outline: none;
 
 	&::placeholder {
 		font-family: "PT Sans Bold";
@@ -111,6 +112,16 @@
 		line-height: 26px;
 		font-weight: bold;
 		color: #000000;
+	}
+
+	&:hover {
+		background-color: #E5E5E5;
+	}
+
+	&:focus {
+		background: none;
+		outline: 4px solid #E5E5E5;
+		outline-offset: -4px;
 	}
 }
 
@@ -181,6 +192,16 @@
 		background-position: right 20px center, top right;
 		background-size: 18px 18px, 58px 58px;
 	}
+
+	&:hover {
+		background-color: #E5E5E5;
+	}
+
+	&:focus {
+		background-color: #ffffff;
+		outline: 4px solid #E5E5E5;
+		outline-offset: -4px;
+	}
 }
 
 .impression__list {
@@ -193,6 +214,8 @@
 	position: relative;
 	margin-bottom: 44px;
 	padding-left: 80px;
+
+	cursor: pointer;
 
 	&:last-child {
 		margin-bottom: 40px;
@@ -208,10 +231,12 @@
 	font-weight: bold;
 	color: #000000;
 	text-align: left;
+
+	cursor: pointer;
 }
 
-.filter-input-radio + label {
-	&::before {
+.filter-input-radio {
+	& + label::before {
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -226,10 +251,22 @@
 		background-color: #f2f2f2;
 		border-radius: 50%;
 	}
+
+	&:hover + label::before,
+	&:focus + label::before {
+		border: 5px solid #E5E5E5;
+		background-color: #E5E5E5;
+	}
+
+	&:active + label::before {
+		border: 5px solid #D5D5D5;
+		background-color: #D5D5D5;
+	}
 }
 
-.filter-input-radio:checked + label {
-	&::after {
+
+.filter-input-radio {
+	&:checked + label::after {
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -244,6 +281,10 @@
 		background-color: #333333;
 		border-radius: 50%;
 	}
+
+	&:active + label::after {
+		opacity: 0.3;
+	}
 }
 
 .places__list {
@@ -255,6 +296,8 @@
 	position: relative;
 	margin-bottom: 57px;
 	padding-left: 80px;
+
+	cursor: pointer;
 
 	&:last-child {
 		margin-bottom: 38px;
@@ -270,10 +313,12 @@
 	font-weight: bold;
 	color: #000000;
 	text-align: left;
+
+	cursor: pointer;
 }
 
-.filter-input-checkbox + label {
-	&::before {
+.filter-input-checkbox {
+	& + label::before {
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -286,10 +331,19 @@
 		background-color: #f2f2f2;
 		border-radius: 5px;
 	}
+
+	&:hover + label::before,
+	&:focus + label::before {
+		background-color: #E5E5E5;
+	}
+
+	&:active + label::before {
+		background-color: #D5D5D5;
+	}
 }
 
-.filter-input-checkbox:checked + label {
-	&::after {
+.filter-input-checkbox {
+	&:checked + label::after {
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -300,6 +354,10 @@
 		height: 17px;
 
 		background-image: url("../img/icon-checkbox.svg");
+	}
+
+	&:active + label::after {
+		opacity: 0.3;
 	}
 }
 
@@ -328,6 +386,16 @@
 		font-weight: bold;
 		color: #000000;
 	}
+
+	&:hover {
+		background-color: #E5E5E5;
+	}
+
+	&:focus {
+		background: none;
+		outline: 4px solid #E5E5E5;
+		outline-offset: -4px;
+	}
 }
 
 .comments__submit-wrapper {
@@ -354,6 +422,21 @@
 
 	box-sizing: border-box;
 
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: #669EC0;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background-color: #5496BD;
+	}
+
+	&:disabled {
+		background-color: #E5E5E5;
+	}
 }
 
 .comments__required-fields {
